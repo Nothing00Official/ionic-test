@@ -17,14 +17,14 @@
 
 	<ion-list>
 		<ion-item *ngFor="let proj of projects">
-			<ion-avatar slot="start">
-				<img src="https://vol.unidea.org/assets/images/favicon.ico">
-                </ion-avatar>
-				<ion-label>
-					<h2>{{proj.name}}</h2>
-					<h3>{{proj.created}}</h3>
-					<p></p>
-				</ion-label>
+			<ion-avatar>
+				<ion-icon name="albums"></ion-icon>
+			</ion-avatar>
+			<ion-label>
+				<h2 class="title">{{proj.title}}</h2>
+				<h3>{{proj.publishDate | date: 'EEE dd MMM yyyy'}}</h3>
+				<p><span class="startDate">{{proj.startDate | date: 'dd/MM/yyyy'}}</span>{{' - '}}<span class="endDate" *ngIf="proj.endDate!=null">{{proj.endDate | date: 'dd/MM/yyyy'}}</span></p>
+			</ion-label>
 		</ion-item>
 	</ion-list>
 

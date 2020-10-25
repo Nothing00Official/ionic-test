@@ -1,6 +1,21 @@
 ion-menu-button {
   color: var(--ion-color-success);
 }
+ion-item{
+    color: rgb(23, 160, 23);
+}
+
+.title{
+    color: rgb(17, 100, 17);
+}
+
+.startDate{
+   color: var(--ion-color-success); 
+}
+
+.endDate{
+   color: var(--ion-color-danger); 
+}
 
 #container {
   text-align: center;
