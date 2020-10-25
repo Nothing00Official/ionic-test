@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>{{ folder }}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+	<ion-progress-bar type="indeterminate" *ngIf="loading" color="success"></ion-progress-bar>
+	<ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">{{ folder }}</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-list>
+		<ion-item *ngFor="let proj of projects">
+			<ion-avatar slot="start">
+				<img src="https://vol.unidea.org/assets/images/favicon.ico">
+                </ion-avatar>
+				<ion-label>
+					<h2>{{proj.name}}</h2>
+					<h3>{{proj.created}}</h3>
+					<p></p>
+				</ion-label>
+		</ion-item>
+	</ion-list>
+
+	<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData()" id="infinite-scroll">
+		<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+		</ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+
+</ion-content>

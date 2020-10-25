@@ -1,0 +1,7 @@
+{
+  "name": "volunteering",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
