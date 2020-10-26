@@ -1,0 +1,21 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>{{project!=null ? project.title : 'Loading..'}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-progress-bar type="indeterminate" *ngIf="loading" color="success"></ion-progress-bar>
+	<div id="container" *ngIf="project!=null">
+		<p>Pubblicato {{project.publishDate | date: 'EEEE dd MMMM yyyy'}}</p>
+		<span class="startDate">Il progetto ha inizio {{project.startDate | date: 'EEEE dd MMMM yyyy'}}</span>
+		<br>
+		<span class="endDate" *ngIf="project.endDate!=null">Il progetto terminerà {{project.endDate | date: 'EEEE dd MMMM yyyy'}}</span>
+		<br>
+        <br>
+        <p>Il progetto {{project.title}} è stato approvato dalla commissione progettuale nell'assemblea degli associati in
+			data {{project.approvedDate | date: 'dd MMMM yyyy'}} ed è un'iniziativa a carico del dipartimento di Volontariato di UNIDEA.</p>
+	   <br><br>
+       <div id="content"></div>
+    </div>
+</ion-content>

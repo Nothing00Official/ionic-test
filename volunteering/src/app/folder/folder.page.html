@@ -16,7 +16,7 @@
 	</ion-header>
 
 	<ion-list>
-		<ion-item *ngFor="let proj of projects">
+		<ion-item *ngFor="let proj of projects" [routerLink]="['project', proj.link]">
 			<ion-avatar>
 				<ion-icon name="albums"></ion-icon>
 			</ion-avatar>

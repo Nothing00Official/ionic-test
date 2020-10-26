@@ -26,7 +26,7 @@ export class FolderPage implements OnInit {
         this.loadCount();
     }
 
-    loadProject(page) {
+    loadProject(page) {  
         this.loading = true;
         this.http.get<Project[]>("https://tech.unidea.org/api/app.php?q=list&page=" + page).subscribe(res => {
             this.projects = res;

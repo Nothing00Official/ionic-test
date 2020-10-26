@@ -3,4 +3,8 @@ export class Project {
     publishDate: Date;
     startDate: Date;
     endDate: Date;
+    approvedDate: Date;
+    link: string;
+    content: string;
+    budget: number;
 }
